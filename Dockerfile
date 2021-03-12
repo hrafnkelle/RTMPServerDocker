@@ -38,6 +38,7 @@ ENV RTMP_PORT 1935
 # Add NGINX path, config and static files.
 ENV PATH "${PATH}:/usr/local/nginx/sbin"
 ADD nginx.conf /etc/nginx/nginx.conf
+ADD live.html /usr/local/nginx/html
 RUN mkdir -p /opt/data && mkdir /www
 # ADD static /www/static
 
