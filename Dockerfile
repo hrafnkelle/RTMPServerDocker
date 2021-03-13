@@ -24,7 +24,7 @@ RUN cd /tmp/nginx-1.18.0 && \
   --with-debug \
   --with-cc-opt="-Wimplicit-fallthrough=0" && \
   cd /tmp/nginx-1.18.0 && make && make install
-
+RUN cp /tmp/nginx-rtmp-module-1.2.1/stat.xsl /usr/local/nginx/html/
 RUN rm -rf /tmp/*
 
   # Set default ports.
